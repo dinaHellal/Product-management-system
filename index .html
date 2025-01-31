@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cruds</title>
+    <link rel="stylesheet" href="assets/styles/main.css" />
+    <link rel="shortcut icon" href="assets/icons/crud.webp" type="image/x-icon">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>CRUD</h1>
+        <p>Product management system</p>
+      </header>
+      <div class="inputs">
+        <input type="text" id="title" placeholder="اسم المنتج" />
+        <div class="price">
+          <input type="number" id="price" placeholder="السعر" />
+        </div>
+        <input type="number" id="NumberOfPieces" placeholder="عدد القطع" />
+        <input type="number" id="count" placeholder="العدد" />
+        <input type="text" id="Category" placeholder="الصنف" />
+        <button id="submit">اضافه</button>
+      </div>
+      <div class="outputs">
+        <div class="searchBlock">
+          <input onkeyup="searchData(this.value)" type="text" id="search" placeholder="بحث" />
+          <div class="btnSearch">
+            <button onclick="getSearchMood(this.id)" id="searchTitle">بحث باسم المنتج</button>
+            <button onclick="getSearchMood(this.id)" id="searchCategory">بحث بالصنف</button>
+          </div>
+        </div>
+      </div>
+      <div id="deleteAll"></div>
+      <table id="tbody">
+        <tr>
+          <th>العنوان</th>
+          <th>السعر</th>
+          <th>الصنف</th>
+          <th>تحديث</th>
+          <th>حذف</th>
+        </tr>
+        <tbody></tbody>
+      </table>
+    </div>
+    <script src="assets/scripts/main.js"></script>
+  </body>
+</html>
